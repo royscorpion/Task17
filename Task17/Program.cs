@@ -28,10 +28,10 @@ namespace Task17
     }
     
     //Класс, моделирующий счет в банке
-    class BankAccount<T>
+    class BankAccount<T> //класс обобщенного типа
     {
         //Закрытые поля информации о счете
-        private T AccountNumber { get; set; }
+        private T AccountNumber { get; set; }//поле обобщенного типа
         private double AccountBalance { get; set; }
         private string AccountOwner { get; set; }
         //Метод для заполнения данных
@@ -44,7 +44,7 @@ namespace Task17
         //Метод для чтения данных
         internal void BankAccountGet()
         {
-            Console.WriteLine("\nИнформация о запрошенном счете\nНомер счета: {0,10:000000000000}\nБаланс:  {1,12:###,###,###.##}\nВладелец:  {2,10}",AccountNumber, AccountBalance, AccountOwner);
+            Console.WriteLine("\nИнформация о запрошенном счете\nНомер счета: {0,16:000000000000}\nБаланс:  {1,20:###,###,###.##}\nВладелец:  {2,18}",AccountNumber, AccountBalance, AccountOwner);
         }
 
     }
